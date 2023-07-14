@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 import br.ufal.ic.p2.entities.Customer;
 import br.ufal.ic.p2.entities.Product;
-import br.ufal.ic.p2.entities.ShoppingCart;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -21,7 +20,6 @@ public class App {
         String address = sc.next();
 
         Customer customer = new Customer(ID, name, address);
-        ShoppingCart shoppingCart = new ShoppingCart(customer);
 
         while (entry != 0) {
             System.out.print("Enter your choice: ");
