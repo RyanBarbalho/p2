@@ -8,7 +8,7 @@ public class ShoppingCart {
 
     public ShoppingCart(Customer customer) {
         this.customer = customer;
-
+        this.productList = new ArrayList<Product>();
     }
 
     public Customer getCustomer() {

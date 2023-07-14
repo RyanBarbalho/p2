@@ -10,7 +10,7 @@ public class App {
     public static void main(String[] args) throws Exception {
         System.out.println("Welcome to shopping cart!");
         Scanner sc = new Scanner(System.in);
-        int entry = 0;
+        int entry = 10;
         System.out.println("First, let's create your customer profile!");
 
         System.out.println("Enter customer ID: ");
@@ -59,7 +59,7 @@ public class App {
                 // sera q é gambiarra?
             } else if (entry == 3) { // empty
                 customer.getShoppingCart().emptyCart();
-            } else if (entry == 4) {// contents
+            } else if (entry == 4) {// contents ta sem os preço e tal AJEITAR
                 System.out.println(customer.getShoppingCart().getContents());
             } else if (entry == 5) {// total price
                 System.out.println(customer.getShoppingCart().getTotalPrice());
