@@ -1,4 +1,4 @@
-package br.ufal.ic.p3.entities;
+package br.ufal.ic.p2.entities;
 
 public class Product {
     private String name;

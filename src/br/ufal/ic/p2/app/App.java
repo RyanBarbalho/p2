@@ -1,10 +1,10 @@
-package br.ufal.ic.p3.app;
+package br.ufal.ic.p2.app;
 
 import java.util.Scanner;
 
-import br.ufal.ic.p3.entities.Customer;
-import br.ufal.ic.p3.entities.Product;
-import br.ufal.ic.p3.entities.ShoppingCart;
+import br.ufal.ic.p2.entities.Customer;
+import br.ufal.ic.p2.entities.Product;
+import br.ufal.ic.p2.entities.ShoppingCart;
 
 public class App {
     public static void main(String[] args) throws Exception {
