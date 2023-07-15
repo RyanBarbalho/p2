@@ -15,9 +15,10 @@ public class App {
         System.out.println("Enter customer ID: ");
         int ID = sc.nextInt();
         System.out.println("Enter customer name: ");
-        String name = sc.next();
+        sc.nextLine();
+        String name = sc.nextLine();
         System.out.println("Enter customer address: ");
-        String address = sc.next();
+        String address = sc.nextLine();
 
         Customer customer = new Customer(ID, name, address);
 
@@ -34,6 +35,7 @@ public class App {
             System.out.println("-------------------------------------");
 
             entry = sc.nextInt();
+            System.out.println("-------------------------------------");
 
             if (entry == 1) {
                 System.out.println("Enter product name: ");
@@ -47,17 +49,14 @@ public class App {
                 System.out.println("Enter product name: ");
                 sc.nextLine();
                 String ProductName = sc.nextLine();
-                System.out.println("Enter product price: ");
-                double price = sc.nextDouble();
 
-                Product product = new Product(name, price);
-                // vai acessar o customer, que vai acessar o shopping cart, que vai acessar o
+                // atraves do customer vai acessar o shopping cart, que vai acessar o metodo
                 // produto e remover
                 customer.getShoppingCart().removeProduct(customer.getShoppingCart().findProduct(ProductName));
                 // sera q é gambiarra?
             } else if (entry == 3) { // empty
                 customer.getShoppingCart().emptyCart();
-            } else if (entry == 4) {// contents ta sem os preço e tal AJEITAR
+            } else if (entry == 4) {// contents
                 System.out.println(customer.getShoppingCart().getContents());
             } else if (entry == 5) {// total price
                 System.out.println(customer.getShoppingCart().getTotalPrice());

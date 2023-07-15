@@ -1,8 +1,10 @@
 package br.ufal.ic.p2.entities;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class ShoppingCart {
+    private static final DecimalFormat df = new DecimalFormat("0.00");
     private Customer customer;
     private ArrayList<Product> productList;
 
@@ -31,7 +33,7 @@ public class ShoppingCart {
         productList.clear();
     }
 
-    public double getItemCount() {
+    public int getItemCount() {
         return productList.size();
     }
 
@@ -46,7 +48,7 @@ public class ShoppingCart {
     public String getContents() {
         String contents = "";
         for (Product product : productList) {
-            contents += product.getName() + "\n";
+            contents += product.getName() + " R$" + df.format(product.getPrice()) + "\n";
         }
         return contents;
     }
